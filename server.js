@@ -35,6 +35,9 @@ app.use('/api/tasks', taskRoutes);
 app.get('/api/health', (req, res) => {
   res.json({ status: 'ok', message: 'Server is running' });
 });
+app.get("/" , (req,res)=>{
+  res.send("api is working")
+})
 
 // Error handler
 app.use(errorHandler);
